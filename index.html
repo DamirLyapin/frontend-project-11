@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS агрегатор</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container py-5 bg-grey">
+        <div class="text-center mb-5">
+            <h1 class="display-4">RSS агрегатор</h1>
+            <p class="lead"></p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form id="rssForm" class="mb-4">
+                    <label for="rssUrl" class="form-label">Ссылка RSS</label>
+                    <input type="url"
+                    class="form-control"
+                    id="rssUrl"
+                    required>
+                    <button type="submit" class="btn btn-primary w-100">Добавить</button>
+                    <div class="invalid-feedback" id="url-feedback"></div>
+                    <small class="form-text" text-muted>Пример: https://loren-rss.hexlet.app/feed</small>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
