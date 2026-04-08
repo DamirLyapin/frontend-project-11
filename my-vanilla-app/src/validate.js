@@ -1,6 +1,33 @@
 import * as yup from 'yup'
+import i18next from 'i18next';
 import { proxy, subscribe, snapshot } from 'valtio/vanilla'
 
+i18next.init({
+  lng: 'ru',
+  resources: {
+    ru: {
+      translation: {
+        errors: {
+          required: 'Не должно быть пустым',
+          url: 'Ссылка должна быть валидным URL',
+          duplicate: 'RSS уже существует'
+        },
+        ui: {
+          label: 'Ссылка RSS',
+          button: 'Добавить',
+          example: 'Пример: https://lorem-rss.hexlet.app/feed'
+        }
+      }
+    }
+  }
+});
+
+yup.setLocale({
+  string: {
+    required: i18next.t('errors.required'),
+    url: i18next.t('errors.url')
+  }
+});
 
 const schema = yup.object().shape({
     url: yup.string().required('Не должно быть пустым').url('Ссылка должна быть валидным URL')
