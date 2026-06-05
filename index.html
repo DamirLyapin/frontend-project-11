@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend-project-11</title>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <div id="app" class="flex-grow-1 container-60">
+      <section id="inputField" class="w-100">
+        <div class="row justify-content-center m-0">
+          <div class="mainField col-lg-8">
+            <h1 class="text-white mb-0" data-i18n="interface.title"></h1>
+            <p class="text-white" data-i18n="interface.subtitle"></p>
+            <form id="rss-form" class="row g-3 align-items-stretch">
+              <div class="col form-floating">
+                <input type="text" id="rss-input" class="form-control" name="rss" placeholder=" " aria-label="url">
+                <label for="rss-input" data-i18n="interface.inputPlaceholderText"></label>
+              </div>
+              <div class="col-auto d-flex">
+                <button id="rss-submit" class="btn btn-secondary px-4" type="submit" data-i18n="interface.addBtn"></button>
+              </div>
+            </form>
+            <p class="text-white-50 mt-2 mb-0 small" data-i18n="interface.example"></p>
+            <p id="error-msg" class="feedback m-0 small"></p>
+          </div>
+        </div>
+      </section>
+      <section id="outputField" class="mt-4">
+      </section>
+    </div>
+    <footer class="py-2 container-60">
+        <span class="text-muted">created by <a href="https://hexlet.io/">Hexlet</a></span>
+    </footer>
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-title"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="modal-content">
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-primary" id="modal-read" data-i18n="modal.modalReadBtn"></a>
+            <button type="button" class="btn btn-secondary text-white" data-bs-dismiss="modal" id="modal-close" data-i18n="modal.modalCloseBtn"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
